@@ -38,8 +38,8 @@ def main(page: ft.Page):
             if page.hoteles > 0:
                 page.hoteles -= 1
                 contador.value = str(page.hoteles)
+                page.snack_bar = ft.SnackBar(ft.Text("✅ Reserva correcta"), bgcolor="green")
             else:
-                mensaje.value = ft.SnackBar(ft.Text("✅ Reserva correcta"), bgcolor="green")
                 page.snack_bar = ft.SnackBar(ft.Text("❌ No hay hoteles disponibles"), bgcolor="red")
             page.snack_bar.open = True
             page.update()
